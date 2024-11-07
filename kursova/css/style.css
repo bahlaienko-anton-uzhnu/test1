@@ -1,0 +1,154 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Светлый фон */
+}
+
+header {
+    background: #1d1d1d; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #e74c3c; /* Красная линия снизу */
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+#searchInput {
+    width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#filters {
+    margin: 20px 0;
+}
+
+select, input[type="number"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c; /* Красный цвет */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c0392b; /* Темнее при наведении */
+}
+
+#gamesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.game-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.game-card h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+
+.game-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
+}
+
+
+.modal-body {
+    display: flex;
+}
+
+.modal-description {
+    flex: 1;
+    padding: 20px;
+}
+
+.modal-video {
+    flex: 1;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 5% auto;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #1d1d1d;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #e74c3c;
+
+}
