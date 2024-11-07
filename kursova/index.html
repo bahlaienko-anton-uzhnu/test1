@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;">
+    <title>Каталог комп'ютерних ігор</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <header>
+        <h1>Каталог комп'ютерних ігор</h1>
+        <input type="text" id="searchInput" placeholder="Пошук за назвою гри">
+        <div id="suggestions" class="suggestions"></div>
+        <div id="filters">
+            <select id="genreFilter">
+                <option value="">Виберіть жанр</option>
+            </select>
+            <select id="platformFilter">
+                <option value="">Виберіть платформу</option>
+            </select>
+            <input type="number" id="yearFrom" placeholder="Рік (з)">
+            <input type="number" id="yearTo" placeholder="Рік (до)">
+            <input type="text" id="developerFilter" placeholder="Розробник">
+            <select id="ratingFilter">
+                <option value="">Мінімальний рейтинг</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button id="sortByName">Сортувати за назвою</button>
+            <button id="sortByRating">Сортувати за рейтингом</button>
+            <button id="sortByYear">Сортувати за роком</button>
+        </div>
+    </header>
+
+
+    <main id="gamesContainer"></main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>   
+            <div class="modal-body">
+                <div class="modal-description">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+                <div class="modal-video">
+                    <iframe id="modalVideo" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Автор: Антон Баглаєнко Юрієвич</p>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+
+</body>
+</html>
